@@ -63,13 +63,30 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ── Upgrade button: open Stripe Payment Link ──
-// Replace STRIPE_PAYMENT_LINK_URL with your actual Stripe Payment Link
-const STRIPE_PAYMENT_LINK_URL = 'https://buy.stripe.com/YOUR_PAYMENT_LINK';
-
+// ── Upgrade button: Dodo Payments Checkout ──
+// Replace the payment link with Dodo Checkout for a more premium experience
 document.getElementById('upgradeBtn').addEventListener('click', (e) => {
     e.preventDefault();
-    window.open(STRIPE_PAYMENT_LINK_URL, '_blank');
+    
+    // Check if DodoPayments is loaded
+    if (typeof DodoPayments !== 'undefined') {
+        DodoPayments.checkout({
+            productId: 'p_8524961025', // Placeholder Product ID (User should replace with theirs)
+            quantity: 1,
+            // You can also pass metadata like userId if the user is already logged in on the landing page
+            onSuccess: (data) => {
+                console.log('Payment Successful:', data);
+                alert('Thank you for upgrading! Your premium features will be unlocked shortly.');
+                window.location.href = '/success.html';
+            },
+            onCancel: () => {
+                console.log('Payment Cancelled');
+            }
+        });
+    } else {
+        // Fallback to static link if script failed to load
+        window.open('https://buy.dodopayments.com/p_8524961025', '_blank');
+    }
 });
 
 // ── Install button: open Chrome Web Store ──

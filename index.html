@@ -183,6 +183,64 @@
     </div>
   </section>
 
+  <!-- DASHBOARD PREVIEW -->
+  <section class="dashboard-preview" id="dashboard">
+    <div class="section-header">
+      <span class="section-tag">New</span>
+      <h2>Visualize your progress</h2>
+      <p>The built-in dashboard tracks your wins, so you don't have to.</p>
+    </div>
+    
+    <div class="dashboard-container">
+      <div class="dashboard-mock">
+        <div class="db-header">
+          <div class="db-tabs">
+            <span class="db-tab">Focus</span>
+            <span class="db-tab active">Dashboard</span>
+          </div>
+        </div>
+        <div class="db-body">
+          <div class="db-stats">
+            <div class="db-stat">
+              <span class="db-val">12</span>
+              <span class="db-lbl">Goals Hit</span>
+            </div>
+            <div class="db-stat">
+              <span class="db-val">3</span>
+              <span class="db-lbl">Interrupted</span>
+            </div>
+          </div>
+          <div class="db-chart">
+            <div class="db-chart-title">Today's Distractions</div>
+            <div class="db-site-item"><span class="db-site-name">reddit.com</span><div class="db-bar"><div class="db-bar-fill" style="width: 85%"></div></div></div>
+            <div class="db-site-item"><span class="db-site-name">youtube.com</span><div class="db-bar"><div class="db-bar-fill" style="width: 40%"></div></div></div>
+            <div class="db-site-item"><span class="db-site-name">twitter.com</span><div class="db-bar"><div class="db-bar-fill" style="width: 25%"></div></div></div>
+          </div>
+          <div class="db-checklist">
+            <div class="db-chart-title">Daily Targets</div>
+            <div class="db-todo checked">Complete React project</div>
+            <div class="db-todo checked">Exercise 30 mins</div>
+            <div class="db-todo">Read 10 pages</div>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard-text">
+        <div class="text-block">
+          <h4>Daily/Weekly Trends</h4>
+          <p>See exactly where your time goes and how many goals you've crushed this week.</p>
+        </div>
+        <div class="text-block">
+          <h4>Interruption Tracking</h4>
+          <p>Learn your triggers. FocusGuard tells you when and where you get distracted most.</p>
+        </div>
+        <div class="text-block">
+          <h4>Goal Persistence</h4>
+          <p>Set daily targets directly in the extension. Tick them off as you go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="how-it-works" id="how-it-works">
     <div class="section-header">
@@ -293,7 +351,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">How do I sign up for Premium?</button>
-        <div class="faq-a">Click "Get Premium" above. You can sign in with Google, get a magic link sent to your email, or create an account with email and password. After payment, your extension is unlocked automatically.</div>
+        <div class="faq-a">Click "Get Premium" above. You can sign in with Google or create an account with email and password. After payment, your extension is unlocked automatically.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What does the AI Monitor actually do?</button>
@@ -340,6 +398,8 @@
     </div>
   </footer>
 
+  <!-- Dodo Payments Integration -->
+  <script src="https://js.dodopayments.com/v1/checkout.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
